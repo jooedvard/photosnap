@@ -4,6 +4,8 @@ import Section from "@/components/Section/Section";
 import photographer from "@/assets/photographer.jpg";
 import laptop from "@/assets/laptop.jpg";
 import everyone from "@/assets/everyone.jpg";
+import Pictures from "@/components/Pictures/Pictures";
+import Features from "@/components/Features/Features";
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
           Then share your story with<br /> everyone.
         </p>} />
       <Section img={everyone} gradient={false} type={"section__black"} bg={"white"} heading={<h1>Designed for<br /> everyone</h1>} text={<p>Photosnap can help you create stories that resonate<br />with your audience. Our tool is designed for<br />photographers of all levels, brands, businesses you<br />name it.</p>} />
+      <Pictures></Pictures>
+      <Features />
     </>
   )
 }

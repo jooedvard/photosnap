@@ -1,4 +1,5 @@
 import styles from "./Section.module.css";
+import {BsArrowRight} from 'react-icons/bs';
 
 function Section({ img, type, bg, heading, text, gradient }) {
   return (
@@ -18,7 +19,7 @@ function Section({ img, type, bg, heading, text, gradient }) {
             {heading}
             {text}
             <div>
-              <button>GET AN INVITE</button>
+              <button>GET AN INVITE <BsArrowRight /></button>
             </div>
           </div>
         </div>
@@ -33,7 +34,7 @@ function Section({ img, type, bg, heading, text, gradient }) {
             {text}
 
             <div>
-              <button>View the stories</button>
+              <button>View the stories <BsArrowRight /></button>
             </div>
           </div>
         </div>

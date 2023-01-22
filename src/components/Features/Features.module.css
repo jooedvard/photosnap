@@ -1,0 +1,42 @@
+.feature{
+    font-family: Avenir;
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 10rem;
+}
+
+.feature img{
+    width: 50px;
+    margin: auto;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.feature h2{
+    font-family: AvenirBlack;
+    text-align: center;
+}
+
+.feature p{
+    text-align: center;
+    line-height: 2;
+    margin-top: 2rem;
+    
+}
+
+@media screen and (max-width: 1250px) {
+    .feature{
+        padding: 10rem 3rem;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .feature p{
+        max-width: 40ch;
+    }
+}
