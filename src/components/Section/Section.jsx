@@ -1,22 +1,43 @@
-import styles from './Section.module.css';
+import styles from "./Section.module.css";
 
-function Section({img, type}) {
+function Section({ img, type, bg, heading, text, gradient }) {
   return (
-    <section className={styles.section__left}>
-      <div className={styles.section__black}>
-      <div className={styles.section__gradient}></div>  
-        <h1>CREATE AND<br />SHARE YOUR PHOTO STORIES.</h1>
-        <p>
-          Photosnap is a platform for photographers and visual storytellers. We
-          make it easy to share photos, tell stories and connect with others.
-        </p>
-        <div>
-          <button>GET AN INVITE</button>
+    <section
+      className={`${styles.section__left} ${
+        type === "section__white" && styles.flex_col
+      }`}
+    >
+      {type === "section__black" && (
+        <div
+          className={`${styles.section__black} ${
+            bg === "white" && styles.bg_white
+          }`}
+        >
+          {gradient && <div className={styles.section__gradient}></div>}
+          <div>
+            {heading}
+            {text}
+            <div>
+              <button>GET AN INVITE</button>
+            </div>
+          </div>
         </div>
+      )}
+      <div className={styles.shrink}>
+        <img src={img.src} />
       </div>
-      <div> 
-        <img src={img.src}/>
-      </div>
+      {type === "section__white" && (
+        <div className={styles.section__white}>
+          <div>
+            {heading}
+            {text}
+
+            <div>
+              <button>View the stories</button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

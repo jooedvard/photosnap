@@ -44,7 +44,6 @@
     justify-content: center;
     flex-direction: column;
     gap: 3rem;
-    margin-bottom: 2rem;
     height: 100%;
     transition: ease-in-out .1;
 
@@ -72,6 +71,8 @@
     transition: ease-in .1s;
     animation: slideDown ease-in .3s forwards;
     transform: translateX(-100%);
+    font-size: 1.25rem;
+    margin: .5rem 0;
 }
 
 .mobile_nav ul li:nth-child(1) {
