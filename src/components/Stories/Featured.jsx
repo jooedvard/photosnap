@@ -20,6 +20,7 @@ const Featured = ({ img, title, postingDate, author, text }) => {
     <>
       <div className={styles.full_section}>
         <Image
+          priority={true}
           src={img}
           alt="featured"
           fill={true}
@@ -40,7 +41,15 @@ const Featured = ({ img, title, postingDate, author, text }) => {
       </div>
       <div className={styles.picture_list}>
         {data.hits.map((picture, index) => {
-            return <Picture key={"picture__list" + index} img={picture.largeImageURL} width={picture.imageWidth} height={picture.imageHeight} creator={picture.user}/>
+          return (
+            <Picture
+              key={"picture__list" + index}
+              img={picture.largeImageURL}
+              width={picture.imageWidth}
+              height={picture.imageHeight}
+              creator={picture.user}
+            />
+          );
         })}
       </div>
     </>
