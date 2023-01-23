@@ -3,6 +3,7 @@ import picture0 from "@/assets/picture.jpg";
 import picture1 from "@/assets/picture (1).jpg";
 import picture2 from "@/assets/picture (2).jpg";
 import picture3 from "@/assets/picture (3).jpg";
+import Image from "next/image";
 
 import {BsArrowRight} from 'react-icons/bs';
 
@@ -44,7 +45,7 @@ export default Pictures;
 function Picture({ img, heading, creator }) {
   return (
     <div className={styles.picture}>
-      <img src={img.src} alt={"laptop"} />
+      <Image src={img} alt={"laptop"} placeholder="blur"/>
       <div className={styles.picture__wrapper}>
         <div className={styles.picture__content}>
           <div className={styles.picture__heading}>

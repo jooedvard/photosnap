@@ -3,8 +3,8 @@
     min-height: 100%;
 }
 
-.section__left p{
-    color:  #6c757d;
+.section__left p {
+    color: #6c757d;
 }
 
 .section__left img {
@@ -63,7 +63,7 @@
     color: var(--black);
 }
 
-.section__white p{
+.section__white p {
     color: #6c757d;
 }
 
@@ -85,7 +85,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+
 }
 
 .section__left button:hover,

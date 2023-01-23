@@ -1,5 +1,7 @@
 import styles from "./Section.module.css";
-import {BsArrowRight} from 'react-icons/bs';
+import { BsArrowRight } from "react-icons/bs";
+import Image from "next/image";
+import { Suspense } from "react";
 
 function Section({ img, type, bg, heading, text, gradient }) {
   return (
@@ -19,13 +21,15 @@ function Section({ img, type, bg, heading, text, gradient }) {
             {heading}
             {text}
             <div>
-              <button>GET AN INVITE <BsArrowRight /></button>
+              <button>
+                GET AN INVITE <BsArrowRight />
+              </button>
             </div>
           </div>
         </div>
       )}
       <div className={styles.shrink}>
-        <img src={img.src} />
+          <Image src={img} alt="section-img" priority={true} placeholder="blur"/>
       </div>
       {type === "section__white" && (
         <div className={styles.section__white}>
@@ -34,7 +38,9 @@ function Section({ img, type, bg, heading, text, gradient }) {
             {text}
 
             <div>
-              <button>View the stories <BsArrowRight /></button>
+              <button>
+                View the stories <BsArrowRight />
+              </button>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import responsive from "@/assets/icon (1).svg";
 import infinite from "@/assets/icon (2).svg";
 import shout from "@/assets/icon (3).svg";
 import styles from "@/components/Features/Features.module.css";
+import Image from "next/image";
 
 const features = [
   {
@@ -24,8 +25,8 @@ const features = [
 function Features() {
   return (
     <div className={styles.feature}>
-      {features.map(({ img, feature, text }) => {
-        return <Feature img={img} feature={feature} text={text} />;
+      {features.map(({ img, feature, text }, index) => {
+        return <Feature img={img} feature={feature} text={text} key={"feature" + index}/>;
       })}
     </div>
   );
@@ -36,7 +37,7 @@ export default Features;
 function Feature({ img, feature, text }) {
   return (
     <div>
-      <img src={img.src} />
+      <img src={img.src} alt="svg"/>
       <h2>{feature}</h2>
       <p>{text}</p>
     </div>

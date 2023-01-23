@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Nav.module.css";
 import {FiMenu} from "react-icons/fi";
 import { VscClose } from "react-icons/vsc";
+import Link from "next/link";
 
 console.log(styles)
 
@@ -11,10 +12,10 @@ export default function Nav() {
   return (
     <>
       <nav className={styles.nav}>
-        <h1>PHOTOSNAP</h1>
+        <h1><Link href="/">PHOTOSNAP</Link></h1>
         <ul>
           <li>
-            <a>STORIES</a>
+            <Link href="/stories">STORIES</Link>
           </li>
           <li>
             <a>FEATURES</a>
