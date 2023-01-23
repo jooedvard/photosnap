@@ -7,6 +7,10 @@
     gap: 10rem;
 }
 
+.footer a{
+    color: var(--white);
+}
+
 .footer__logo_icons {
     display: flex;
     height: 100%;

@@ -9,19 +9,24 @@
 }
 
 
-:root{
+:root {
     --black: #000000;
     --white: #ffffff;
+    --offtext: #6c757d;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 
-a{
+a {
     text-decoration: none;
     color: black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

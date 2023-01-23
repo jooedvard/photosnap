@@ -5,7 +5,7 @@ import {AiOutlineTwitter} from 'react-icons/ai';
 import {AiOutlineInstagram} from 'react-icons/ai';
 import { FiArrowRight } from "react-icons/fi";
 import {TfiPinterest} from 'react-icons/tfi';
-
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -22,8 +22,8 @@ function Footer() {
       </div>
       <div className={styles.footer__menu}>
             <ul>
-                <li>Home</li>
-                <li>Stories</li>
+                <li><Link href={"/"}>Home</Link></li>
+                <li><Link href={"/stories"}>Stories</Link></li>
                 <li>Features</li>
                 <li>Pricing</li>
             </ul>
