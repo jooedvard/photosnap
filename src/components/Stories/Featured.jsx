@@ -4,18 +4,9 @@ import { BsArrowRight } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import Picture from "../Pictures/Picture";
 
-const API_KEY = "33059658-8a1fcafabbd31d09bccb159b7";
-const PIXABAY = " https://pixabay.com/api/?key=";
-const Featured = ({ img, title, postingDate, author, text }) => {
-  const [data, setData] = useState(null);
 
-  useEffect(() => {
-    let request = fetch(PIXABAY + API_KEY);
-    request.then((data) => data.json()).then((data) => setData(data));
-  }, []);
 
-  if (data == null) return;
-
+const Featured = ({ img, title, postingDate, author, text, images }) => {
   return (
     <>
       <div className={styles.full_section}>
@@ -40,14 +31,14 @@ const Featured = ({ img, title, postingDate, author, text }) => {
         </div>
       </div>
       <div className={styles.picture_list}>
-        {data.hits.map((picture, index) => {
+        {images?.hits.map((picture, index) => {
           return (
             <Picture
               key={"picture__list" + index}
               img={picture.largeImageURL}
               width={picture.imageWidth}
               height={picture.imageHeight}
-              creator={picture.user}
+              creator={"posted by " + picture.user}
             />
           );
         })}
